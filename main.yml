@@ -1,0 +1,13 @@
+# vim 02-01-lampstack.yml
+---
+- name: "LampStack Package Installation"
+  hosts: amazon
+  become: yes
+  tasks:
+    
+    - name: "Installing Apache and PHP Packages"
+      yum:
+        name:
+          - httpd
+          - php
+        state: present

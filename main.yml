@@ -24,3 +24,10 @@
         dest: /var/www/html/index.php
         owner: apache
         group: apache
+
+     - name: "Installing LampStack Packages"
+      yum:
+        name:
+          - php-mysql
+          - mariadb-server
+        state: present

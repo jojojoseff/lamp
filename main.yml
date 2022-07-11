@@ -17,3 +17,10 @@
         name: httpd
         state: restarted
         enabled: true
+
+     - name: "Creating index.php file"
+      copy:
+        content: "<?php phpinfo(); ?>"
+        dest: /var/www/html/index.php
+        owner: apache
+        group: apache

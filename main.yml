@@ -11,3 +11,9 @@
           - httpd
           - php
         state: present
+
+     - name: "Restarting/Enabling httpd service"
+      service:
+        name: httpd
+        state: restarted
+        enabled: true
